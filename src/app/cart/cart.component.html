@@ -1,0 +1,20 @@
+<div class="cart-container">
+  <h3>Cart</h3>
+<!--  <div class="item-container" *ngIf="!items">-->
+<!--    <p>No items in your cart.</p>-->
+<!--  </div>-->
+  <div *ngIf="items" class="item-container">
+      <div *ngFor="let item of items" class="product-detail-container">
+        <p>{{item['product'].name}}</p>
+        <img src="{{item['product'].imagePath}}" />
+        <p>{{item['product'].price}} Caps</p>
+        <button (click)="deleteCartItem(item.id)" class="btn btn-primary">Remove</button>
+      </div>
+  </div>
+  <div *ngIf="items" class="cart-text-container">
+    <p *ngIf="cartTotal === 0">You don't have any items in your cart yet. Buy something so you can get
+      out there and explore the wasteland.</p>
+    <h4 *ngIf="cartTotal !== undefined">Cart Total: {{cartTotal}} Caps</h4>
+  </div>
+
+</div>

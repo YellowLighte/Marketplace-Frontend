@@ -1,0 +1,18 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+<!--    <a class="nav-link active" data-toggle="tab" href="#home"></a>-->
+  </li>
+  <li *ngFor="let category of categories" class="nav-item">
+    <a class="nav-link" data-toggle="tab" routerLink="/categories/{{category.categoryID}}">{{category.name}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="col-sm-9">
+    <p>Welcome to the shop. Take a look at whatever you want, but everything has a price...</p>
+  </div>
+  <div class="col-sm-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

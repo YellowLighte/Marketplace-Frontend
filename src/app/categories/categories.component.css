@@ -1,0 +1,11 @@
+.col-sm-3 {
+  width: 30vw;
+}
+.col-sm-9 {
+  width: 50vw;
+  display: flex;
+}
+
+p {
+  padding: 5px;
+}
